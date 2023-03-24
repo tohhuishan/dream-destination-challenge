@@ -27,6 +27,25 @@
       .nav-link:hover {
         color: rgb(0, 0, 0);
         border-bottom: rgb(255, 140, 0) 3px solid;
+        font-weight: 500;
+      }
+
+      section {
+        padding: 50px;
+      }
+      section p {
+        line-height: 1.5;
+      }
+
+      #hero {
+        background-image: url("https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2023/02/iStock-Eloi_Omella-osaka-tower.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .hero-text-wrapper {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
       }
 
       @media (max-width: 1130px) {
@@ -59,8 +78,8 @@
   <body>
     <nav class="navbar navbar-expand-lg px-5 py-3 w-100">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <strong> OSAKA RECOMMENDS </strong>
+        <a class="navbar-brand" href="index.html#hero">
+          <strong>OSAKA RECOMMENDS</strong>
         </a>
         <button
           class="navbar-toggler"
@@ -100,13 +119,23 @@
     </nav>
 
     <section id="hero">
-      <h1>Osaka</h1>
+      <div class="hero-text-wrapper rounded">
+        <h1 class="text-center">Osaka</h1>
 
-      <p>this is a para</p>
+        <p>
+          Osaka is Japan’s third-largest city and was the country’s first
+          capital. It is considered a vital economic center in Japan and
+          currently is home to the largest seaport in Japan and many leading
+          Japanese manufacturers.
+          <br />
+          Osaka city is also deemed a culinary paradise: its nickname Tenka no
+          Daidokoro (or 天下の台所) means the nation’s kitchen.
+        </p>
+      </div>
     </section>
 
     <section id="gourmet">
-      <h2>Gourmet in Osaka</h2>
+      <h2 class="text-center">Gourmet in Osaka</h2>
 
       <p>
         You can read more about the brief history of Osaka flavours
@@ -121,19 +150,19 @@
     </section>
 
     <section id="parks-and-scenery">
-      <h2>Parks and Scenery in Osaka</h2>
+      <h2 class="text-center">Parks and Scenery in Osaka</h2>
     </section>
 
     <section id="temples-and-shrines">
-      <h2>Temples and Shrines in Osaka</h2>
+      <h2 class="text-center">Temples and Shrines in Osaka</h2>
     </section>
 
     <section id="cultural-activities">
-      <h2>Cultural Activities in Osaka</h2>
+      <h2 class="text-center">Cultural Activities in Osaka</h2>
     </section>
 
     <section id="fresh-produce">
-      <h2>Fresh Produce in Osaka</h2>
+      <h2 class="text-center">Fresh Produce in Osaka</h2>
     </section>
 
     <footer>
