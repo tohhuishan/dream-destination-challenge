@@ -30,9 +30,6 @@
         font-weight: 500;
       }
 
-      section {
-        padding: 50px;
-      }
       section p {
         line-height: 1.5;
       }
@@ -42,10 +39,14 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        padding: 100px;
       }
       .hero-text-wrapper {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 50px;
+      }
+      #hero p {
+        color: rgb(0, 0, 0);
       }
 
       @media (max-width: 1130px) {
@@ -120,17 +121,20 @@
 
     <section id="hero">
       <div class="hero-text-wrapper rounded">
-        <h1 class="text-center">Osaka</h1>
+        <h1 class="text-center mb-5">Osaka</h1>
 
-        <p>
-          Osaka is Japan’s third-largest city and was the country’s first
-          capital. It is considered a vital economic center in Japan and
-          currently is home to the largest seaport in Japan and many leading
-          Japanese manufacturers.
-          <br />
-          Osaka city is also deemed a culinary paradise: its nickname Tenka no
-          Daidokoro (or 天下の台所) means the nation’s kitchen.
-        </p>
+        <div class="hero-paragraph-wrapper px-5">
+          <p>
+            Osaka is Japan’s third-largest city and was the country’s first
+            capital. It is considered a vital economic center in Japan and
+            currently is home to the largest seaport in Japan and many leading
+            Japanese manufacturers.
+          </p>
+          <p>
+            Osaka city is also deemed a culinary paradise: its nickname Tenka no
+            Daidokoro (or 天下の台所) means the nation’s kitchen.
+          </p>
+        </div>
       </div>
     </section>
 
