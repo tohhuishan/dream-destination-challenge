@@ -31,22 +31,60 @@
       }
 
       section p {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
         line-height: 1.5;
+      }
+      h1 {
+        font-size: 72px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 54px;
+      }
+      h3 {
+        font-size: 24px;
       }
 
       #hero {
-        background-image: url("https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2023/02/iStock-Eloi_Omella-osaka-tower.jpg");
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./osaka-tower.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         padding: 100px;
       }
+      #hero h3 {
+        letter-spacing: 2px;
+        margin: 0;
+        padding: 0;
+      }
       .hero-text-wrapper {
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 50px;
+        margin: 100px 120px 0;
+        padding: 50px 80px;
       }
       #hero p {
         color: rgb(0, 0, 0);
+      }
+
+      #gourmet {
+        background: rgba(255, 166, 0, 0.4);
+        padding: 50px;
+      }
+      #gourmet .row {
+        border: grey 2px solid;
+      }
+      #gourmet img {
+        width: 100%;
+      }
+      #gourmet .text {
+        background: rgb(255, 255, 255);
+        padding: 24px;
       }
 
       @media (max-width: 1130px) {
@@ -58,6 +96,15 @@
         .navbar-nav {
           align-items: start;
         }
+
+        #hero {
+          padding: 50px;
+        }
+        .hero-text-wrapper {
+          background-color: rgba(255, 255, 255, 0.7);
+          margin: 40px;
+          padding: 20px;
+        }
       }
       @media (max-width: 450px) {
         .navbar-brand {
@@ -65,6 +112,14 @@
         }
         .nav-link {
           font-size: 14px;
+        }
+
+        .hero-text-wrapper {
+          margin: 30px 10px;
+        }
+
+        #gourmet {
+          padding: 30px 30px 10px;
         }
       }
       @media (max-width: 330px) {
@@ -120,37 +175,143 @@
     </nav>
 
     <section id="hero">
-      <div class="hero-text-wrapper rounded">
-        <h1 class="text-center mb-5">Osaka</h1>
+      <h1 class="text-center text-white mb-2">Osaka</h1>
+      <h3 class="text-center text-white">Japan’s Culinary Kitchen</h3>
 
-        <div class="hero-paragraph-wrapper px-5">
-          <p>
-            Osaka is Japan’s third-largest city and was the country’s first
-            capital. It is considered a vital economic center in Japan and
-            currently is home to the largest seaport in Japan and many leading
-            Japanese manufacturers.
-          </p>
-          <p>
-            Osaka city is also deemed a culinary paradise: its nickname Tenka no
-            Daidokoro (or 天下の台所) means the nation’s kitchen.
-          </p>
-        </div>
+      <div class="hero-text-wrapper rounded">
+        <p>
+          Osaka is Japan’s third-largest city and was the country’s first
+          capital. It is considered a vital economic center in Japan and
+          currently is home to the largest seaport in Japan and many leading
+          Japanese manufacturers.
+        </p>
+        <p>
+          Osaka city is also deemed a culinary paradise: its nickname Tenka no
+          Daidokoro (or 天下の台所) means the nation’s kitchen.
+        </p>
       </div>
     </section>
 
     <section id="gourmet">
       <h2 class="text-center">Gourmet in Osaka</h2>
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-lg-6 p-0">
+            <img src="./osaka-kitsune-udon.jpg" alt="" class="img-fluid" />
+          </div>
 
-      <p>
-        You can read more about the brief history of Osaka flavours
-        <a
-          href="https://osaka-info.jp/en/osaka/food/gastronomy-story01/"
-          target="_blank"
-        >
-          here
-        </a>
-        !
-      </p>
+          <div class="col-lg-6 text">
+            <h3>Udon & Udonsuki</h3>
+            <p>
+              In Osaka, udon noodles are famed for the way that their softness
+              harmonizes gently with the kombu and skipjack-accented broth. One
+              age-old favorite is salty-sweet kitsune udon, where the noodles
+              are topped with fried tofu boiled to plump perfection.
+            </p>
+            <p>
+              Kitsune udon is available throughout Japan, but Osaka’s kitsune
+              udon, such as at Dotonbori Imai and Usamitei Matsubaya in
+              Minamisemba, is particularly delicious. This is because of the
+              quality of the dashi (ingredients include kombu, dried mackerel
+              flakes, and round herring flakes).
+            </p>
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-lg-6 text">
+            <h3>Sushi</h3>
+            <p>
+              Osaka’s famous style of sushi is pressed sushi. “Box sushi” is one
+              example: the toppings and vinegared rice are placed into a square
+              wooden mold and pressed to fit. Watching the process of pressing
+              box sushi is mesmeric.
+            </p>
+            <p>
+              The rice is boiled using kombu cooking stock, and flavored with
+              sugar and mirin (sweet cooking saké). And because this is such a
+              popular flavor in Osaka, numerous local shops also use sugared
+              rice when serving hand-pressed sushi.
+            </p>
+          </div>
+
+          <div class="col-lg-6 p-0">
+            <img
+              src="./osaka-pressed-mackerel-sushi.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-lg-6 p-0">
+            <img src="./osaka-takoyaki.jpg" alt="" class="img-fluid" />
+          </div>
+
+          <div class="col-lg-6 text">
+            <h3>Takoyaki</h3>
+            <p>
+              The most famous Osaka fast food, takoyaki octopus dumplings
+              embodies the Osaka waste-not-want-not ethos, wherein the abundant
+              catch of octopus from Osaka Bay was put straight to good use in
+              the form of dumplings.
+            </p>
+
+            <p>
+              Served in boat-shaped bamboo dishes, the piping hot balls are
+              picked up and ferried into one’s mouth using toothpicks—with the
+              perfect takoyaki featuring a crisped skin and tender filling. An
+              Osaka classic topped with Worcestershire sauce, ginger and seaweed
+              flakes.
+            </p>
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-lg-6 text">
+            <h3>Okonomiyaki</h3>
+            <p>
+              Along with takoyaki, this dish may rightly be described as Osaka
+              soul food. While both dishes involve dissolving flour in dashi,
+              okonomiyaki includes cabbage—a non-negotiable ingredient—usually
+              along with pork, as well as whichever additional ingredients you
+              like.
+            </p>
+            <p>
+              A thin layer of batter is spread out in a circle atop an iron
+              griddle, and the brow my-5ned savory pancake is then served with
+              toppings such as sauce, mayonnaise and powdered seaweed—a serving
+              style that is in turn said to have influenced takoyaki. The Osaka
+              version features the addition of yamaimo (yam) to the batter,
+              providing a lovely fluffiness.
+            </p>
+          </div>
+
+          <div class="col-lg-6 p-0">
+            <img src="./osaka-okonomiyaki.jpg" alt="" class="img-fluid" />
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-lg-6 p-0">
+            <img src="./osaka-kami-nabe.jpg" alt="" class="img-fluid" />
+          </div>
+
+          <div class="col-lg-6 text">
+            <h3>Kami-nabe</h3>
+            <p>
+              Japan’s various regions are home to local hot pots, and Osaka is
+              no exception. An Osaka original is the mysterious kami-nabe (paper
+              hot pot). The idea of putting a fire under paper is shocking—but
+              this dish indeed features a sheet of paper set atop a wire rack,
+              which is then heated using a charcoal fire. Washi paper is treated
+              via a special process, and the presence of the dashi ensures that
+              the paper itself will not burn.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="parks-and-scenery">
