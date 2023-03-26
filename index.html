@@ -77,7 +77,7 @@
         padding: 50px;
       }
       #gourmet .row {
-        border: grey 2px solid;
+        border: rgb(128, 128, 128) 2px solid;
       }
       #gourmet img {
         width: 100%;
@@ -85,6 +85,19 @@
       #gourmet .text {
         background: rgb(255, 255, 255);
         padding: 24px;
+      }
+
+      #parks-and-scenery .option {
+        border: rgb(128, 128, 128) 1px solid;
+        padding: 4px 8px;
+        transition: all 150ms ease-in-out;
+      }
+      #parks-and-scenery .option:hover {
+        background: rgba(255, 166, 0, 0.4);
+      }
+      #parks-and-scenery .option.selected {
+        background: rgb(255, 140, 0);
+        color: rgb(255, 255, 255);
       }
 
       @media (max-width: 1130px) {
@@ -104,6 +117,17 @@
           background-color: rgba(255, 255, 255, 0.7);
           margin: 40px;
           padding: 20px;
+        }
+      }
+      @media (max-width: 700px) {
+        h1 {
+          font-size: 42px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+        h3 {
+          font-size: 20px;
         }
       }
       @media (max-width: 450px) {
@@ -316,6 +340,26 @@
 
     <section id="parks-and-scenery">
       <h2 class="text-center">Parks and Scenery in Osaka</h2>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="option">Chausuyama (Tennoji Park)</div>
+          <div class="option">Eiraku Dam</div>
+          <div class="option">Kema Sakuranomiya Park</div>
+          <div class="option">
+            Meiji-no-mori Mino Quasi-national Park (Mino Waterfall)
+          </div>
+          <div class="option">Nagai Botanical Garden</div>
+          <div class="option">Osaka Castle Park</div>
+          <div class="option">Takihata Dam</div>
+          <div class="option">Tempozan Park</div>
+          <div class="option">Tsurumiryokuchi Expo '90 Commemorative Park</div>
+        </div>
+
+        <div class="col-8">
+          <div class="main-content"></div>
+        </div>
+      </div>
     </section>
 
     <section id="temples-and-shrines">
