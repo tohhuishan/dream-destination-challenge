@@ -53,6 +53,9 @@
       h3 {
         font-size: 24px;
       }
+      h4 {
+        font-size: 18px;
+      }
 
       #hero {
         background-image: linear-gradient(
@@ -126,6 +129,10 @@
         .navbar-brand {
           margin-right: 40px;
         }
+
+        #temples-and-shrines .carousel-inner-item {
+          max-width: 640px;
+        }
       }
       @media (max-width: 991px) {
         .navbar-nav {
@@ -140,6 +147,11 @@
           margin: 40px;
           padding: 20px;
         }
+
+        #temples-and-shrines .carousel-inner-item {
+          max-width: 500px;
+          padding: 48px;
+        }
       }
       @media (max-width: 700px) {
         h1 {
@@ -150,6 +162,24 @@
         }
         h3 {
           font-size: 20px;
+        }
+        h4 {
+          font-size: 16px;
+        }
+
+        #temples-and-shrines {
+          padding: 30px 10px;
+        }
+        #temples-and-shrines .carousel-inner-item {
+          margin: 28px auto;
+          max-width: 440px;
+          padding: 28px;
+        }
+      }
+      @media (max-width: 600px) {
+        #temples-and-shrines .carousel-inner-item {
+          max-width: 300px;
+          padding: 18px 8px;
         }
       }
       @media (max-width: 450px) {
@@ -167,11 +197,20 @@
         #gourmet {
           padding: 30px 30px 10px;
         }
+
+        #temples-and-shrines .carousel-inner-item {
+          max-width: 300px;
+          padding: 14px 4px;
+        }
       }
       @media (max-width: 330px) {
         .navbar-brand {
           font-size: 18px;
           text-align: center;
+        }
+
+        .hero-text-wrapper {
+          display: none;
         }
       }
     </style>
@@ -391,7 +430,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Ginzanji Temple</h3>
+              <h3 class="text-center mt-3">Ginzanji Temple</h3>
 
               <div class="m-5">
                 <img src="./ginzanji-temple.jpeg" alt="" class="img-fluid" />
@@ -409,7 +448,7 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
+                <p class="m-0">
                   <a href="" target="_blank">
                     6-26 Ikutamateramachi, Tennoji-ku, Osaka, 543-0073
                   </a>
@@ -420,7 +459,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Shitennoji Temple</h3>
+              <h3 class="text-center mt-3">Shitennoji Temple</h3>
 
               <div class="m-5">
                 <img src="./shitennoji-temple.jpg" alt="" class="img-fluid" />
@@ -438,7 +477,7 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
+                <p class="m-0">
                   <a href="" target="_blank">
                     1-chōme-11-18 Shitennōji, Tennoji Ward, Osaka, 543-0051
                   </a>
@@ -449,7 +488,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Namba Yasaka Shrine</h3>
+              <h3 class="text-center mt-3">Namba Yasaka Shrine</h3>
 
               <div class="m-5">
                 <img src="./namba-yasaka-shrine.jpg" alt="" class="img-fluid" />
@@ -476,7 +515,7 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
+                <p class="m-0">
                   <a href="" target="_blank">
                     2-9-19 Motomachi, Naniwa-ku, Osaka, 556-0016
                   </a>
@@ -487,7 +526,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Sukunahikona Shrine</h3>
+              <h3 class="text-center mt-3">Sukunahikona Shrine</h3>
 
               <div class="m-5">
                 <img src="./sukunahikona-shrine.jpg" alt="" class="img-fluid" />
@@ -514,10 +553,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >2-chōme-1-8 Doshōmachi, Chuo Ward, Osaka, 541-0045</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    2-chōme-1-8 Doshōmachi, Chuo Ward, Osaka, 541-0045
+                  </a>
                 </p>
               </div>
             </div>
@@ -525,7 +564,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Horikawa Ebisu Shrine</h3>
+              <h3 class="text-center mt-3">Horikawa Ebisu Shrine</h3>
 
               <div class="m-5">
                 <img
@@ -554,11 +593,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >5-chōme-4-17 Nishitenma, Kita Ward, Osaka, 530-0047,
-                    Japan</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    5-chōme-4-17 Nishitenma, Kita Ward, Osaka, 530-0047, Japan
+                  </a>
                 </p>
               </div>
             </div>
@@ -566,7 +604,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Ikasuri Shrine</h3>
+              <h3 class="text-center mt-3">Ikasuri Shrine</h3>
 
               <div class="m-5">
                 <img src="./ikasuri-shrine.jpg" alt="" class="img-fluid" />
@@ -591,10 +629,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >4 Watanabe 3, Kyutarocho, Chuo-ku, Osaka</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    4 Watanabe 3, Kyutarocho, Chuo-ku, Osaka
+                  </a>
                 </p>
               </div>
             </div>
@@ -602,7 +640,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Kumata Shrine</h3>
+              <h3 class="text-center mt-3">Kumata Shrine</h3>
 
               <div class="m-5">
                 <img src="./kumata-shrine.jpg" alt="" class="img-fluid" />
@@ -630,11 +668,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >2-chōme-1-67 Hirano Miyamachi, Hirano Ward, Osaka,
-                    547-0046</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    2-chōme-1-67 Hirano Miyamachi, Hirano Ward, Osaka, 547-0046
+                  </a>
                 </p>
               </div>
             </div>
@@ -642,7 +679,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Dainenbutsuji Temple</h3>
+              <h3 class="text-center mt-3">Dainenbutsuji Temple</h3>
 
               <div class="m-5">
                 <img
@@ -675,11 +712,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >1-chōme-7-26 Hirano Uemachi, Hirano Ward, Osaka,
-                    547-0045</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    1-chōme-7-26 Hirano Uemachi, Hirano Ward, Osaka, 547-0045
+                  </a>
                 </p>
               </div>
             </div>
@@ -687,7 +723,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Horikoshi Shrine</h3>
+              <h3 class="text-center mt-3">Horikoshi Shrine</h3>
 
               <div class="m-5">
                 <img src="./horikoshi-shrine.jpeg" alt="" class="img-fluid" />
@@ -712,10 +748,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >1-8 Chausuyamachō, Tennoji Ward, Osaka, 543-0063</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    1-8 Chausuyamachō, Tennoji Ward, Osaka, 543-0063
+                  </a>
                 </p>
               </div>
             </div>
@@ -723,7 +759,7 @@
 
           <div class="carousel-item">
             <div class="carousel-inner-item shadow-lg rounded">
-              <h3 class="text-center">Kozugu Shrine</h3>
+              <h3 class="text-center mt-3">Kozugu Shrine</h3>
 
               <div class="m-5">
                 <img src="./kozugu-shrine.jpeg" alt="" class="img-fluid" />
@@ -749,10 +785,10 @@
                 </p>
 
                 <h4>Address</h4>
-                <p>
-                  <a href="" target="_blank"
-                    >1-1-29 Kozu, Chuo-ku, Osaka, 542-0072</a
-                  >
+                <p class="m-0">
+                  <a href="" target="_blank">
+                    1-1-29 Kozu, Chuo-ku, Osaka, 542-0072
+                  </a>
                 </p>
               </div>
             </div>
