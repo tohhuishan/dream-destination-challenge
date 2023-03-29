@@ -98,17 +98,25 @@
       }
 
       #parks-and-scenery {
-        padding: 50px 20px;
+        padding: 50px;
       }
-      #parks-and-scenery .option {
+      #parks-and-scenery .main-content {
+        padding: 30px;
+      }
+
+      #parks-and-scenery .list-group-item,
+      #parks-and-scenery .tab-content {
+        font-size: 14px;
+      }
+      #parks-and-scenery .list-group-item {
         border: rgb(128, 128, 128) 1px solid;
         padding: 4px 8px;
         transition: all 150ms ease-in-out;
       }
-      #parks-and-scenery .option:hover {
+      #parks-and-scenery .list-group-item:hover {
         background: rgba(255, 166, 0, 0.4);
       }
-      #parks-and-scenery .option.selected {
+      #parks-and-scenery .list-group-item.active {
         background: rgb(255, 140, 0);
         color: rgb(255, 255, 255);
       }
@@ -417,23 +425,182 @@
     <section id="parks-and-scenery">
       <h2 class="text-center">Parks and Scenery in Osaka</h2>
 
-      <div class="row">
-        <div class="col-4">
-          <div class="option">Chausuyama (Tennoji Park)</div>
-          <div class="option">Eiraku Dam</div>
-          <div class="option">Kema Sakuranomiya Park</div>
-          <div class="option">
-            Meiji-no-mori Mino Quasi-national Park (Mino Waterfall)
+      <div class="row main-content">
+        <div class="col-sm-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a
+              class="list-group-item list-group-item-action active"
+              id="list-chausuyama-list"
+              data-bs-toggle="list"
+              href="#list-chausuyama"
+              role="tab"
+              aria-controls="list-chausuyama"
+            >
+              Chausuyama (Tennoji Park)
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-eiraku-dam-list"
+              data-bs-toggle="list"
+              href="#list-eiraku-dam"
+              role="tab"
+              aria-controls="list-eiraku-dam"
+            >
+              Eiraku Dam
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-kema-sakuranomiya-park-list"
+              data-bs-toggle="list"
+              href="#list-kema-sakuranomiya-park"
+              role="tab"
+              aria-controls="list-kema-sakuranomiya-park"
+            >
+              Kema Sakuranomiya Park
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-mino-waterfall-list"
+              data-bs-toggle="list"
+              href="#list-mino-waterfall"
+              role="tab"
+              aria-controls="list-mino-waterfall"
+            >
+              Meiji-no-mori Mino Quasi-national Park (Mino Waterfall)
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-nagai-botanical-garden-list"
+              data-bs-toggle="list"
+              href="#list-nagai-botanical-garden"
+              role="tab"
+              aria-controls="list-nagai-botanical-garden"
+            >
+              Nagai Botanical Garden
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-osaka-castle-park-list"
+              data-bs-toggle="list"
+              href="#list-osaka-castle-park"
+              role="tab"
+              aria-controls="list-osaka-castle-park"
+            >
+              Osaka Castle Park
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-takihata-dam-list"
+              data-bs-toggle="list"
+              href="#list-takihata-dam"
+              role="tab"
+              aria-controls="list-takihata-dam"
+            >
+              Takihata Dam
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-tempozan-park-list"
+              data-bs-toggle="list"
+              href="#list-tempozan-park"
+              role="tab"
+              aria-controls="list-tempozan-park"
+            >
+              Tempozan Park
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-commemorative-park-list"
+              data-bs-toggle="list"
+              href="#list-commemorative-park"
+              role="tab"
+              aria-controls="list-commemorative-park"
+            >
+              Tsurumiryokuchi Expo '90 Commemorative Park
+            </a>
           </div>
-          <div class="option">Nagai Botanical Garden</div>
-          <div class="option">Osaka Castle Park</div>
-          <div class="option">Takihata Dam</div>
-          <div class="option">Tempozan Park</div>
-          <div class="option">Tsurumiryokuchi Expo '90 Commemorative Park</div>
         </div>
+        <div class="col-sm-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="list-chausuyama"
+              role="tabpanel"
+              aria-labelledby="list-chausuyama-list"
+            >
+              <h3 class="d-sm-none d-block">Chausuyama (Tennoji Park)</h3>
 
-        <div class="col-8">
-          <div class="main-content"></div>
+              <p>this is info about Chausuyama</p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-eiraku-dam"
+              role="tabpanel"
+              aria-labelledby="list-eiraku-dam-list"
+            >
+              <h3 class="d-sm-none d-block">Eiraku Dam</h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-kema-sakuranomiya-park"
+              role="tabpanel"
+              aria-labelledby="list-kema-sakuranomiya-park-list"
+            >
+              <h3 class="d-sm-none d-block">Kema Sakuranomiya Park</h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-mino-waterfall"
+              role="tabpanel"
+              aria-labelledby="list-mino-waterfall-list"
+            >
+              <h3 class="d-sm-none d-block">
+                Meiji-no-mori Mino Quasi-national Park (Mino Waterfall)
+              </h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-nagai-botanical-garden"
+              role="tabpanel"
+              aria-labelledby="list-nagai-botanical-garden-list"
+            >
+              <h3 class="d-sm-none d-block">Nagai Botanical Garden</h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-osaka-castle-park"
+              role="tabpanel"
+              aria-labelledby="list-osaka-castle-park-list"
+            >
+              <h3 class="d-sm-none d-block">Osaka Castle Park</h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-takihata-dam"
+              role="tabpanel"
+              aria-labelledby="list-takihata-dam-list"
+            >
+              <h3 class="d-sm-none d-block">Takihata Dam</h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-tempozan-park"
+              role="tabpanel"
+              aria-labelledby="list-tempozan-park-list"
+            >
+              <h3 class="d-sm-none d-block">Tempozan Park</h3>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-commemorative-park"
+              role="tabpanel"
+              aria-labelledby="list-commemorative-park-list"
+            >
+              <h3 class="d-sm-none d-block">
+                Tsurumiryokuchi Expo '90 Commemorative Park
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>
