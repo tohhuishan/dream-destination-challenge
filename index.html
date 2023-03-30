@@ -98,12 +98,19 @@
       }
 
       #parks-and-scenery {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./park.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 50px;
       }
       #parks-and-scenery .main-content {
         padding: 30px;
       }
-
       #parks-and-scenery .list-group-item,
       #parks-and-scenery .tab-content {
         font-size: 14px;
@@ -119,6 +126,22 @@
       #parks-and-scenery .list-group-item.active {
         background: rgb(255, 140, 0);
         color: rgb(255, 255, 255);
+      }
+      #parks-and-scenery img {
+        aspect-ratio: 4/3;
+      }
+      #parks-and-scenery iframe {
+        aspect-ratio: 4/3;
+        height: 100%;
+        width: 100%;
+      }
+      #parks-and-scenery p a {
+        color: rgb(255, 166, 0);
+        transition: all 150ms ease-in-out;
+      }
+      #parks-and-scenery p a:hover {
+        background: rgb(255, 166, 0);
+        color: white;
       }
 
       #temples-and-shrines {
@@ -237,7 +260,7 @@
         }
       }
     </style>
-    <title>Osaka - The Dream Destination</title>
+    <title>Osaka - The Dream Travel Destination</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg px-5 py-3 w-100">
@@ -423,21 +446,11 @@
     </section>
 
     <section id="parks-and-scenery">
-      <h2 class="text-center">Parks and Scenery in Osaka</h2>
+      <h2 class="text-center text-white">Parks and Scenery in Osaka</h2>
 
       <div class="row main-content">
         <div class="col-sm-4">
           <div class="list-group" id="list-tab" role="tablist">
-            <a
-              class="list-group-item list-group-item-action active"
-              id="list-chausuyama-list"
-              data-bs-toggle="list"
-              href="#list-chausuyama"
-              role="tab"
-              aria-controls="list-chausuyama"
-            >
-              Chausuyama (Tennoji Park)
-            </a>
             <a
               class="list-group-item list-group-item-action"
               id="list-eiraku-dam-list"
@@ -447,6 +460,16 @@
               aria-controls="list-eiraku-dam"
             >
               Eiraku Dam
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-expo-70-list"
+              data-bs-toggle="list"
+              href="#list-expo-70"
+              role="tab"
+              aria-controls="list-expo-70"
+            >
+              Expo ’70 Commemorative Park
             </a>
             <a
               class="list-group-item list-group-item-action"
@@ -466,7 +489,7 @@
               role="tab"
               aria-controls="list-mino-waterfall"
             >
-              Meiji-no-mori Mino Quasi-national Park (Mino Waterfall)
+              Meiji-no-mori Mino Quasi-National Park (Mino Waterfall)
             </a>
             <a
               class="list-group-item list-group-item-action"
@@ -490,16 +513,6 @@
             </a>
             <a
               class="list-group-item list-group-item-action"
-              id="list-takihata-dam-list"
-              data-bs-toggle="list"
-              href="#list-takihata-dam"
-              role="tab"
-              aria-controls="list-takihata-dam"
-            >
-              Takihata Dam
-            </a>
-            <a
-              class="list-group-item list-group-item-action"
               id="list-tempozan-park-list"
               data-bs-toggle="list"
               href="#list-tempozan-park"
@@ -509,36 +522,120 @@
               Tempozan Park
             </a>
             <a
-              class="list-group-item list-group-item-action"
-              id="list-commemorative-park-list"
+              class="list-group-item list-group-item-action active"
+              id="list-tennoji-park-list"
               data-bs-toggle="list"
-              href="#list-commemorative-park"
+              href="#list-tennoji-park"
               role="tab"
-              aria-controls="list-commemorative-park"
+              aria-controls="list-tennoji-park"
             >
-              Tsurumiryokuchi Expo '90 Commemorative Park
+              Tennoji Park
+            </a>
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-tsurumi-ryokuchi-list"
+              data-bs-toggle="list"
+              href="#list-tsurumi-ryokuchi"
+              role="tab"
+              aria-controls="list-tsurumi-ryokuchi"
+            >
+              Tsurumi Ryokuchi Park
             </a>
           </div>
         </div>
         <div class="col-sm-8">
           <div class="tab-content" id="nav-tabContent">
             <div
-              class="tab-pane fade show active"
-              id="list-chausuyama"
-              role="tabpanel"
-              aria-labelledby="list-chausuyama-list"
-            >
-              <h3 class="d-sm-none d-block">Chausuyama (Tennoji Park)</h3>
-
-              <p>this is info about Chausuyama</p>
-            </div>
-            <div
               class="tab-pane fade"
               id="list-eiraku-dam"
               role="tabpanel"
               aria-labelledby="list-eiraku-dam-list"
             >
-              <h3 class="d-sm-none d-block">Eiraku Dam</h3>
+              <h3 class="d-sm-none d-block mt-3 text-white">Eiraku Dam</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./eiraku-dam.jpeg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.138886170287!2d135.37258031522344!3d34.372387680520106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000cc07439de825%3A0x1f06c0683898c255!2sEiraku%20Dam!5e0!3m2!1sen!2ssg!4v1680138518627!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                The area around Eiraku Dam is planted with 700 flowering sakura
+                trees, including the Yoshino cherry species. There’s a
+                two-kilometer circuit built around the dam’s pond, perfect for
+                strolling or jogging. Additionally, the whole area around the
+                dam is part of the Okuyama Ameyama Natural Park, which features
+                a number of open spaces, squares, and hiking courses. Even after
+                the cherry blossom season passes, many people come here to get
+                in touch with the beauty of nature and the changing seasons.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/GBUw57Ffb1r9Zc586" target="_blank"
+                  >Kubo, Kumatori, Sennan District, Osaka 590-0436, Japan</a
+                >
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list-expo-70"
+              role="tabpanel"
+              aria-labelledby="list-expo-70-list"
+            >
+              <h3 class="d-sm-none d-block mt-3 text-white">
+                Expo ’70 Commemorative Park
+              </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="./expo-70.jpg" alt="" class="img-fluid p-0 m-0" />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.9024032031925!2d135.5301728152351!3d34.80839718040702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000fcb4a27adf27%3A0x66a0ea1cda80d2b4!2sExpo%20%E2%80%9970%20Commemorative%20Park!5e0!3m2!1sen!2ssg!4v1680150204285!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                The Expo’70 Commemorative Park was built on the site of the
+                Japan World Exposition 1970. The Expo’70 Commemorative Park is
+                about 260 Hectares. In the huge park, there are a part of
+                facilities of the Expo’70, such as the Japanese Garden and the
+                Japan Folk Crafts Museum, Osaka. The current site of theme
+                pavilions is forests and seasonal flower gardens . The park is
+                also known as a cultural park embracing natural environment. The
+                park has five main areas; the Japanese Garden, the Natural and
+                Cultural Gardens, cultural institution area, sports and
+                recreation area, and parking area.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/j4PV7x7Bbsnvorx66" target="_blank"
+                  >Senribanpakukoen, Suita, Osaka 565-0826, Japan</a
+                >
+              </p>
             </div>
             <div
               class="tab-pane fade"
@@ -546,7 +643,46 @@
               role="tabpanel"
               aria-labelledby="list-kema-sakuranomiya-park-list"
             >
-              <h3 class="d-sm-none d-block">Kema Sakuranomiya Park</h3>
+              <h3 class="d-sm-none d-block mt-3 text-white">
+                Kema Sakuranomiya Park
+              </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./kema-sakuranomiya-park.jpg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.0011561409824!2d135.51665511523217!3d34.70515078043325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6b6a01cfa47%3A0x7e309a8b760f77cc!2sKema%20Sakuranomiya%20Park!5e0!3m2!1sen!2ssg!4v1680139470396!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                A riverside park boasting water, greenery and cherry trees,
+                which is built on the river terrace between Kema Araizeki
+                (overflow weir) and Temmabashi Bridge. Incorporating classical
+                buildings such as the Mint, Water Square and walking trails, the
+                park is a good place for strolling and jogging. It is known as a
+                cherry blossom-viewing spot for its magnificent 4,500 cherry
+                trees.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/yuE9Hd1emSJMCPeA9" target="_blank"
+                  >Nakanocho, Miyakojima Ward, Osaka, 534-0027, Japan</a
+                >
+              </p>
             </div>
             <div
               class="tab-pane fade"
@@ -554,9 +690,58 @@
               role="tabpanel"
               aria-labelledby="list-mino-waterfall-list"
             >
-              <h3 class="d-sm-none d-block">
-                Meiji-no-mori Mino Quasi-national Park (Mino Waterfall)
+              <h3 class="d-sm-none d-block mt-3 text-white">
+                Meiji-no-mori Mino Quasi-National Park (Mino Waterfall)
               </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./mino-waterfall.jpg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.364378392574!2d135.4701577152363!3d34.847070580397144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f98dcd18275b%3A0x11b23b2040fdbcea!2sMinoh%20Park!5e0!3m2!1sen!2ssg!4v1680139865004!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                A natural park (quasi-national park) of arresting scenic beauty
+                with 100- to 600- meter high mountains in the northern part of
+                Mino City. In the park a long gorge runs through forests from
+                the magnificent Mino Waterfall, about 33 m high and 5 m wide,
+                forming a habitat for 980 species of plants and over 3,000
+                species of insects. Located in precious natural forests in Osaka
+                Prefecture, the park is the western starting point of the Tokai
+                Natural Trail. Visitors can enjoy seasonal changes in the
+                scenery, such as cherry blossoms in spring, trees covered with
+                ice and hanging icicles in winter and especially the brilliantly
+                colored leaves late in fall. The Mino Mountains are an ancient
+                sacred site of Mountain Buddhism, where there are old temples,
+                including Ryuanji Temple (otherwise known as Mino Temple), an
+                important training center said to have been established by
+                En-no-gyoja, the founder of Shugendo. Mino Insect Museum, which
+                is located on the way to the waterfall, is also well known. At
+                the museum visitors can see not only about 10,000 samples of
+                insects, but also over 200 live butterflies of about 30 species,
+                and learn about their year-round ecology.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/dkcWc2x6VEcpHKaMA" target="_blank"
+                  >1-18 Minookoen, Minoh, Osaka 562-0002, Japan</a
+                >
+              </p>
             </div>
             <div
               class="tab-pane fade"
@@ -564,7 +749,47 @@
               role="tabpanel"
               aria-labelledby="list-nagai-botanical-garden-list"
             >
-              <h3 class="d-sm-none d-block">Nagai Botanical Garden</h3>
+              <h3 class="d-sm-none d-block mt-3 text-white">
+                Nagai Botanical Garden
+              </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./nagai-botanical-garden.jpg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.717117198769!2d135.52043241522983!3d34.611314080457554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dc2695990a89%3A0x4efc58088c786856!2sNagai%20Botanical%20Garden!5e0!3m2!1sen!2ssg!4v1680140338172!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                Nagai Botanical Garden, which has an area of 24.2 ha, is an
+                oasis surrounded by greenery in the big city of Osaka. There are
+                about 1,200 species of plants in the garden, and the garden is a
+                recreational area where visitors can enjoy viewing various
+                seasonal flowers in eleven separate garden including camellia,
+                dogwood, peony, rose, Japanese iris, hydrangea, herb, etc. and
+                on large flowerbed.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/h1hdt56LyWfSDx7E9" target="_blank"
+                  >1-23 Nagaikoen, Higashisumiyoshi Ward, Osaka, 546-0034,
+                  Japan</a
+                >
+              </p>
             </div>
             <div
               class="tab-pane fade"
@@ -572,33 +797,203 @@
               role="tabpanel"
               aria-labelledby="list-osaka-castle-park-list"
             >
-              <h3 class="d-sm-none d-block">Osaka Castle Park</h3>
+              <h3 class="d-sm-none d-block mt-3 text-white">
+                Osaka Castle Park
+              </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./osaka-castle-park.jpeg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7412386503174!2d135.5240227152318!3d34.6864796804381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0c977655555%3A0x67f69eaef984d98b!2sOsaka%20Castle%20Park!5e0!3m2!1sen!2ssg!4v1680141361045!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                An extensive park with a total area of 105.6 ha, located in the
+                center of Osaka. In the Osaka Castle Park are several historic
+                structures including the castle tower, in addition to the
+                Nishinomaru Garden with some 300 cherry trees, an ume (plum)
+                orchard boasting 1,270 ume trees in 100 varieties, and other
+                spots where visitors can enjoy seasonal flowers. The Osaka
+                Castle Band Shell and Osaka-jo Hall are popular venues for music
+                concerts. Sports facilities, such as a kyudo (Japanese archery)
+                ground and the Shudokan gymnasium, are also located in the park.
+                The spring/autumn potted plant market, the night cherry blossom
+                viewing in the Nishinomaru Garden, and other annual events are
+                held in the park.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/usZZaGtfKfNS6EX16" target="_blank"
+                  >1-1 Osakajo, Chuo Ward, Osaka, 540-0002, Japan</a
+                >
+              </p>
             </div>
-            <div
-              class="tab-pane fade"
-              id="list-takihata-dam"
-              role="tabpanel"
-              aria-labelledby="list-takihata-dam-list"
-            >
-              <h3 class="d-sm-none d-block">Takihata Dam</h3>
-            </div>
+
             <div
               class="tab-pane fade"
               id="list-tempozan-park"
               role="tabpanel"
               aria-labelledby="list-tempozan-park-list"
             >
-              <h3 class="d-sm-none d-block">Tempozan Park</h3>
+              <h3 class="d-sm-none d-block mt-3 text-white">Tempozan Park</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./tempozan-park.jpg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.890893291073!2d135.43056691523105!3d34.65745828044566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e88c9acf61ff%3A0x3b02814913b42a2a!2sTempozan%20Park!5e0!3m2!1sen!2ssg!4v1680147239668!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                In this park, you'll find Mt. Tempo, the smallest mountain in
+                Japan with a height of only 4.5 meters. It was created in the
+                1830s by piling up sediment dredged from construction on the
+                Ajigawa river. In 1958, the mountain opened as a park. There is
+                also a monument of Meiji Emperor's review place that he watched
+                the new government warship in the first year of the Meiji period
+                nearby. The mountain has been registered with the Geographical
+                Survey Institute.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/Kc3SDY1JGEPpzp2C8" target="_blank"
+                  >3-chōme-2 Chikko, Minato Ward, Osaka, 552-0021, Japan</a
+                >
+              </p>
+            </div>
+            <div
+              class="tab-pane fade show active"
+              id="list-tennoji-park"
+              role="tabpanel"
+              aria-labelledby="list-tennoji-park-list"
+            >
+              <h3 class="d-sm-none d-block mt-3 text-white">Tennoji Park</h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./tennoji-park.jpg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.1572205360935!2d135.50685521445567!3d34.65073219340203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000ddf14727f4e7%3A0x9014f718527a4830!2sTennoji%20Park!5e0!3m2!1sen!2sus!4v1680103184187!5m2!1sen!2sus"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                Park for historical, cultural & scientific experiences Erika
+                Arceo By Erika Arceo Community writer Tennoji Park is a good
+                place to stroll for a couple of hours. It is an extensive
+                botanical garden which features historical, cultural, and
+                scientific experiences. The park includes a traditional Japanese
+                garden called Keitakuen, the Osaka Municipal Museum of Art,
+                Tennoji Zoo and the Chausuyama Burial Mound. The area is
+                suitable for some family bonding time or if you’re simply
+                looking for a place closer to nature within the city.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/9HTEKFpnM3xEXBMLA" target="_blank">
+                  5-55 Chausuyamachō, Tennoji Ward, Osaka, 543-0063, Japan
+                </a>
+              </p>
             </div>
             <div
               class="tab-pane fade"
-              id="list-commemorative-park"
+              id="list-tsurumi-ryokuchi"
               role="tabpanel"
-              aria-labelledby="list-commemorative-park-list"
+              aria-labelledby="list-tsurumi-ryokuchi-list"
             >
-              <h3 class="d-sm-none d-block">
-                Tsurumiryokuchi Expo '90 Commemorative Park
+              <h3 class="d-sm-none d-block mt-3 text-white">
+                Tsurumi Ryokuchi Park
               </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="./tsurumi-ryokuchi-park.jpg"
+                    alt=""
+                    class="img-fluid p-0 m-0"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <iframe
+                    class="d-md-block d-none"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104851.9554171209!2d135.45471609544734!3d34.79024969020987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e04887e1384d%3A0x3f52690c59d14beb!2sTsurumi%20Ryokuchi%20Park!5e0!3m2!1sen!2ssg!4v1680149272942!5m2!1sen!2ssg"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <p class="mt-3 text-white">
+                Tsurumiryokuchi Park is located at the site of The International
+                Garden and Greenery Exposition 1990, a world exhibition that
+                featured the beauty of flowers. After the Expo, the site was
+                turned into a memorial park which was designed to have flowers
+                in bloom in every season. The park is 123 hectares in area, and
+                has a large central pond. A windmill, the symbol of the park,
+                stands on a hillside, while tulips, salvias, cosmos and other
+                flowers blossom in every season. The park features grass fields,
+                farms and rice paddies, and forests and ponds where you can
+                observe insects, thousands of ducks and about 100 species of
+                wild birds. There is also a Japanese garden with a tea ceremony
+                house in Hanamizuki Hall, and the International Garden which
+                uses a variety of soils from different parts of the world. In
+                addition, the park has streams and playground equipment where
+                children can play, a camping and barbecue site, a horseback
+                riding ground, an all-season swimming pool and a sports center,
+                among other recreational facilities and nature observation and
+                experience sites.
+              </p>
+
+              <h4 class="m-0 text-white">Address</h4>
+              <p class="m-0">
+                <a href="https://goo.gl/maps/T1tLc4qrnUchmY8s9" target="_blank"
+                  >2-163 Ryokuchikoen, Tsurumi Ward, Osaka, 538-0036, Japan</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -629,7 +1024,7 @@
                   Treasure for Bunraku puppetry during his lifetime.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/Gj3LN1eziDZ184A97"
@@ -661,7 +1056,7 @@
                   original 6th century design.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/SorKmaSPifVPiBqS8"
@@ -703,7 +1098,7 @@
                   Osaka City's first intangible folk cultural property.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/nFDn4LNCo1sj4cQK8"
@@ -744,7 +1139,7 @@
                   Shinno Festival, held November 22nd - 23rd.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/kuhjRu63dnJfxu3E8"
@@ -787,7 +1182,7 @@
                   (prayer boards) to the shrine when their prayers are answered.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/vbnDnBaC1oqjACTPA"
@@ -826,7 +1221,7 @@
                   Engishiki, as the region's sole grand shrine.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/DQsgBqCf9UfLhVXk9"
@@ -869,7 +1264,7 @@
                   from the gods are scattered within the hall of worship.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/aYQ84tgCx2BmRBVj7"
@@ -917,7 +1312,7 @@
                   Folk Cultural Property in 2002.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/FquxWzi3HxHfETWT8"
@@ -957,7 +1352,7 @@
                   of Horikoshi will grant you a once in a lifetime wish."
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/oLVFCENoPENoyx8w7"
@@ -997,7 +1392,7 @@
                   beautiful.
                 </p>
 
-                <h4>Address</h4>
+                <h4 class="m-0">Address</h4>
                 <p class="m-0">
                   <a
                     href="https://goo.gl/maps/dhS1j6vRW9wxptnf9"
