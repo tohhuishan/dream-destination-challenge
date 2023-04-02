@@ -173,35 +173,70 @@
         color: rgb(255, 255, 255);
       }
       #temples-and-shrines .carousel-control-prev-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23999999'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
       }
       #temples-and-shrines .carousel-control-next-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23999999'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
       }
 
-      .accordion-button:not(.collapsed) {
-        color: #fff !important;
+      #cultural-activities {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("./osaka-castle.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+      }
+      #cultural-activities .accordion-button {
+        font-size: 14px;
+        transition: all 150ms ease-in-out;
+      }
+      #cultural-activities .accordion-button:not(.collapsed) {
+        color: #ffffff !important;
         background-color: var(--secondary-color-theme) !important;
       }
-      .accordion-button:link,
-      .accordion-button:visited,
-      .accordion-button:hover,
-      .accordion-button:active {
+      #cultural-activities .accordion-button:link,
+      #cultural-activities .accordion-button:visited,
+      #cultural-activities .accordion-button:active {
         background-color: var(--secondary-color-theme) !important;
-        color: #fff !important;
+        color: #ffffff !important;
         text-decoration: none !important;
         border: hidden !important;
-        border-color: #fff !important;
+        border-color: #ffffff !important;
         box-shadow: 0px !important;
       }
-      .accordion-button:focus {
+      #cultural-activities .accordion-button:hover {
+        background-color: var(--primary-color-theme) !important;
+        color: #000000 !important;
+        text-decoration: none !important;
+        border: hidden !important;
+        border-color: #ffffff !important;
+        box-shadow: 0px !important;
+      }
+      #cultural-activities .accordion-button:focus {
         z-index: 3;
         border-color: var(--quaternary-color-theme) !important;
         outline: 0;
         box-shadow: 0 0 0 0.01rem var(--quaternary-color-theme) !important;
       }
-      .accordion-button:after {
+      #cultural-activities .accordion-button:after {
         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+      }
+      #cultural-activities p a {
+        color: var(--secondary-color-theme);
+        transition: all 150ms ease-in-out;
+      }
+      #cultural-activities p a:hover {
+        background: var(--secondary-color-theme);
+        color: white;
+      }
+
+      #contact-us {
+        background: var(--primary-color-theme);
+        padding: 30px;
       }
 
       @media (max-width: 1130px) {
@@ -258,11 +293,18 @@
           max-width: 440px;
           padding: 28px;
         }
+
+        #cultural-activities {
+          padding: 30px 10px;
+        }
       }
       @media (max-width: 600px) {
         #temples-and-shrines .carousel-inner-item {
           max-width: 300px;
           padding: 18px 8px;
+        }
+        #cultural-activities .accordion-body {
+          padding: 6px 8px;
         }
       }
       @media (max-width: 450px) {
@@ -284,6 +326,10 @@
         #temples-and-shrines .carousel-inner-item {
           max-width: 300px;
           padding: 14px 4px;
+        }
+
+        #cultural-activities {
+          padding: 30px 2px;
         }
       }
       @media (max-width: 330px) {
@@ -488,7 +534,7 @@
         <div class="col-sm-4">
           <div class="list-group" id="list-tab" role="tablist">
             <a
-              class="list-group-item list-group-item-action"
+              class="list-group-item list-group-item-action active"
               id="list-eiraku-dam-list"
               data-bs-toggle="list"
               href="#list-eiraku-dam"
@@ -558,7 +604,7 @@
               Tempozan Park
             </a>
             <a
-              class="list-group-item list-group-item-action active"
+              class="list-group-item list-group-item-action"
               id="list-tennoji-park-list"
               data-bs-toggle="list"
               href="#list-tennoji-park"
@@ -582,7 +628,7 @@
         <div class="col-sm-8">
           <div class="tab-content" id="nav-tabContent">
             <div
-              class="tab-pane fade"
+              class="tab-pane active"
               id="list-eiraku-dam"
               role="tabpanel"
               aria-labelledby="list-eiraku-dam-list"
@@ -927,7 +973,7 @@
               </p>
             </div>
             <div
-              class="tab-pane fade show active"
+              class="tab-pane fade show"
               id="list-tennoji-park"
               role="tabpanel"
               aria-labelledby="list-tennoji-park-list"
@@ -1468,9 +1514,9 @@
     </section>
 
     <section id="cultural-activities">
-      <h2 class="text-center">Cultural Activities in Osaka</h2>
+      <h2 class="text-center text-white">Cultural Activities in Osaka</h2>
 
-      <div class="m-5">
+      <div class="m-3">
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -1482,7 +1528,7 @@
                 aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseOne"
               >
-                Accordion Item #1
+                Learn Traditional Japanese Instrument, Shamisen
               </button>
             </h2>
             <div
@@ -1491,15 +1537,33 @@
               aria-labelledby="panelsStayOpen-headingOne"
             >
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img src="./shamisen.jpg" alt="" class="img-fluid" />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      The shamisen is a stringed instrument and one of the
+                      traditional musical instruments of Japan. It comprises a
+                      wooden body covered with animal or synthetic skin and a
+                      long neck on which strings are strung and plucked. The
+                      appeal of the shamisen lies, more than anything, in its
+                      versatility in musical expressions.
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/zCRQD54S4xHj71k19"
+                        target="_blank"
+                      >
+                        5-chome-1-17 Tezukayamahigashi, Sumiyoshi Ward, Osaka,
+                        558-0054, Japan
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1513,7 +1577,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo"
               >
-                Accordion Item #2
+                Learn Traditional Japanese Dance — Asuka Hall
               </button>
             </h2>
             <div
@@ -1522,15 +1586,37 @@
               aria-labelledby="panelsStayOpen-headingTwo"
             >
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img
+                      src="./traditional-dance.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      From long ago, Kabuki actors have studied traditional
+                      Japanese dance. Through dancing, actors are able to learn
+                      much about how to move their bodies properly. Indeed, the
+                      two performance arts are intimately connected and this
+                      time, we’ll learn the basic etiquette and movements for
+                      that kind of dance so that you too can naturally move like
+                      a Kabuki actor!
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/xYxN9wPSUp9M1qzm9"
+                        target="_blank"
+                        >5-chome-24-8 Komagawa, Higashisumiyoshi Ward, Osaka,
+                        546-0043, Japan</a
+                      >
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1544,7 +1630,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree"
               >
-                Accordion Item #3
+                Plastic Food Making Experience — Design Pocket
               </button>
             </h2>
             <div
@@ -1553,15 +1639,284 @@
               aria-labelledby="panelsStayOpen-headingThree"
             >
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img src="./design-pocket.jpeg" alt="" class="img-fluid" />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      At Design Pocket Osaka Main Store, we are holding a food
+                      sample production experience every day, which is a
+                      Japanese culture that originated in Osaka. It can be
+                      enjoyed by people of all ages, from children aged 3 and
+                      over (must be accompanied by a guardian) to adults who
+                      love making things. Instead of the traditional wax sample
+                      making experience, we are actually doing an experience
+                      with vinyl chloride materials lined up in front of the
+                      restaurant. Enjoy the food sample production experience
+                      just like a craftsman who is particular about
+                      manufacturing. All the food samples you made can be put in
+                      a container and taken home!
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/qaf3b8zNiXsf8inm6"
+                        target="_blank"
+                      >
+                        10-11 Nanbasennichimae, Chuo Ward, Osaka, 542-0075,
+                        Japan
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                Noh Experience — Yamamoto Noh Theatre
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFour"
+            >
+              <div class="accordion-body">
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img
+                      src="./yamamoto-noh-theater.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      Yamamoto Noh Theater is a three story Noh theater - a
+                      traditional wooden building rarely seen in Japan nowadays.
+                      At Yamamoto Noh Theater, visitors can enjoy various kinds
+                      of traditional Japanese performing arts, including Noh
+                      plays and Kyogen comic plays, both of which have been
+                      designated by UNESCO as World's Intangible Cultural
+                      Heritage. In some of the performances, subtitles are
+                      available in English, Chinese and Korean. In addition to
+                      traditional performances, Yamamoto Noh Theater organizes
+                      various programs for visitors: tours of the Noh stage and
+                      dressing rooms, lectures on Noh plays, trying on Noh
+                      costumes and classes in "utai" - Noh chant. Under the
+                      guidance of Noh masters, visitors can walk on the Noh
+                      stage with masks on, and try playing musical instruments
+                      used in Noh performances. Moreover, Yamamoto Noh Theater
+                      can arrange special programs of “taiken”, or "hands-on
+                      experience", for visitors to take a lesson in traditional
+                      performing arts.
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/KG4AbBRiptmxhtAe8"
+                        target="_blank"
+                      >
+                        1-chome-3-6 Tokuicho, Chuo Ward, Osaka, 540-0025, Japan
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                Shop For Unique Japanese Items — Matsuyamachisuji Shopping
+                Street
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFive"
+            >
+              <div class="accordion-body">
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img
+                      src="./matsuyamachisuji-shopping-street.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      Matsuyamachisuji is a roughly 1 km-long north-south street
+                      in Osaka City's Chuo Ward that has more than 100 wholesale
+                      and specialist stores selling Japanese dolls (like hina
+                      ningyo), toys, candy and Japanese paper. Matsuyamachi is
+                      pronounced "Matchamachi" by local people, which gave rise
+                      to its nickname "Gotchamachi." True to this nickname
+                      ("gotcha" means jumble), local Osakans used to think of
+                      Matsuyamachi as a place that supplies goods for every
+                      occasion: prior to May the place would be packed with
+                      people buying gogatsu ningyo (dolls for the Boys' Festival
+                      in May). Once that is over, Matsuyamachi stocks up on
+                      summer merchandise like fireworks and swimming rings to
+                      await the next wave of customers. More recently the street
+                      is increasingly visited by younger people seeking out the
+                      old-fashioned terraced houses that still remain in the
+                      area.
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/dwV72gSg3THqk27U7"
+                        target="_blank"
+                      >
+                        〒 542-0067 Around Matsuyamachi, Chuo Ward, Osaka, Japan
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSix"
+              >
+                Sword Fighting Lessons — Japan Tate-do Association
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSix"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingSix"
+            >
+              <div class="accordion-body">
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img
+                      src="./tate-do-sword-fighting.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      "Tate" theatrical combat with sword fighting is a special
+                      technique learned by professionals in stage and film
+                      industries and is also a part of traditional Japanese
+                      culture. At the "dojo" training hall, the "Naniwa Samurai
+                      Ambassador" gives Tate lessons and shows to beginners and
+                      the public for their fun learning of sword fighting.
+                      Courses for overseas visitors, with souvenir photo
+                      sessions in kimono, are also available. Why don't you try
+                      the experience of theatrical combat, just like the ones in
+                      Japanese period dramas?
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/MYWa6zemQDZKfZKU7"
+                        target="_blank"
+                        >Japan, 〒550-0014 Osaka, Nishi Ward, Kitahorie,
+                        1-chome−1−27, Imai Building, 3階</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSeven"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSeven"
+              >
+                Transform Into Renjishi — Asuka Hall
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSeven"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingSeven"
+            >
+              <div class="accordion-body">
+                <div class="row p-3">
+                  <div class="col-lg-4 pb-3">
+                    <img src="./renjishi.jpg" alt="" class="img-fluid" />
+                  </div>
+
+                  <div class="col-lg-8">
+                    <p>
+                      Renjishi (連獅子), or Two Lions, is a kabuki dance with
+                      lyrics written by Kawatake Mokuami, choreography by
+                      Hanayagi Jusuke I and music by Kineya Shojiro III and
+                      Kineya Katsusaburo II, first performed in 1872. Originally
+                      staged for a private dance recital in 1861, it was later
+                      expanded and reused in July 1872 as the fourth act for
+                      another play at the Murayama-za in Tokyo. Renjishi
+                      continued to evolve, with two different sets of music
+                      being used (both still performed), and the comic interlude
+                      added in 1901. A later version was created for one father
+                      and two lion cubs. One of many kabuki works based on the
+                      noh play Shakkyo (The Stone Bridge), in the last stages of
+                      Renjishi development as a kabuki dance it was brought
+                      closer back to the noh version. In particular, in the
+                      February 1901 performance at the Tokyo-za, Renjishi was
+                      turned into a matsubame mono (pine-board play), modifying
+                      the stage to replicate the noh stage's green pine tree
+                      background. It is a popular dance in the kabuki repertoire
+                      that is often performed.
+                    </p>
+
+                    <h4>Address</h4>
+                    <p>
+                      <a
+                        href="https://goo.gl/maps/u6jHTTnSRnsonC6d8"
+                        target="_blank"
+                        >3-chome-3-8 Harinakano, Higashisumiyoshi Ward, Osaka,
+                        546-0011, Japan</a
+                      >
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1585,6 +1940,12 @@
         <a href="https://www.linkedin.com/in/toh-hui-shan/" target="_blank">
           Toh Hui Shan
         </a>
+      </p>
+      <p>
+        The project code is open-sourced on
+        <a href="" target="_blank">GitHub</a>
+        and hosted on
+        <a href="" target="_blank">Netlify</a>
       </p>
     </footer>
 
