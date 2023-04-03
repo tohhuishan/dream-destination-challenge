@@ -12,10 +12,11 @@
 
     <style>
       :root {
-        --primary-color-theme: rgba(255, 166, 0, 0.4);
-        --secondary-color-theme: rgb(255, 140, 0);
-        --tertiary-color-theme: rgb(255, 166, 0);
-        --quaternary-color-theme: rgb(128, 128, 128);
+        --primary-color-theme: #ffa60066;
+        --secondary-color-theme: #ff8c00;
+        --tertiary-color-theme: #ffa600;
+        --quaternary-color-theme: #a95d00;
+        --quinary-color-theme: #808080;
       }
       body {
         margin: 0;
@@ -38,13 +39,13 @@
         transition: all 150ms ease-in-out;
       }
       .nav-link:hover {
-        color: rgb(0, 0, 0);
+        color: #000000;
         border-bottom: var(--secondary-color-theme) 3px solid;
         font-weight: 500;
       }
 
       section p {
-        color: rgb(0, 0, 0);
+        color: #000000;
         font-size: 14px;
         line-height: 1.5;
       }
@@ -80,12 +81,12 @@
         padding: 0;
       }
       .hero-text-wrapper {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: #ffffffb3;
         margin: 100px 120px 0;
         padding: 50px 80px;
       }
       #hero p {
-        color: rgb(0, 0, 0);
+        color: #000000;
       }
 
       #gourmet {
@@ -93,13 +94,13 @@
         padding: 50px;
       }
       #gourmet .row {
-        border: var(--quaternary-color-theme) 2px solid;
+        border: var(--quinary-color-theme) 2px solid;
       }
       #gourmet img {
         width: 100%;
       }
       #gourmet .text {
-        background: rgb(255, 255, 255);
+        background: #ffffff;
         padding: 24px;
       }
 
@@ -122,7 +123,7 @@
         font-size: 14px;
       }
       #parks-and-scenery .list-group-item {
-        border: var(--quaternary-color-theme) 1px solid;
+        border: var(--quinary-color-theme) 1px solid;
         padding: 4px 8px;
         transition: all 150ms ease-in-out;
       }
@@ -131,7 +132,7 @@
       }
       #parks-and-scenery .list-group-item.active {
         background: var(--secondary-color-theme);
-        color: rgb(255, 255, 255);
+        color: #ffffff;
       }
       #parks-and-scenery img {
         aspect-ratio: 4/3;
@@ -155,7 +156,7 @@
         padding: 50px 20px;
       }
       #temples-and-shrines .carousel-inner-item {
-        background: rgba(255, 255, 255, 0.8);
+        background: #ffffffcc;
         margin: 64px auto;
         max-width: 800px;
         padding: 64px;
@@ -165,12 +166,12 @@
         margin: 0 auto;
       }
       #temples-and-shrines a {
-        color: rgb(169, 93, 0);
+        color: var(--quaternary-color-theme);
         transition: all 150ms ease-in-out;
       }
       #temples-and-shrines a:hover {
-        background: rgb(169, 93, 0);
-        color: rgb(255, 255, 255);
+        background: var(--quaternary-color-theme);
+        color: #ffffff;
       }
       #temples-and-shrines .carousel-control-prev-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
@@ -218,9 +219,9 @@
       }
       #cultural-activities .accordion-button:focus {
         z-index: 3;
-        border-color: var(--quaternary-color-theme) !important;
+        border-color: var(--quinary-color-theme) !important;
         outline: 0;
-        box-shadow: 0 0 0 0.01rem var(--quaternary-color-theme) !important;
+        box-shadow: 0 0 0 0.01rem var(--quinary-color-theme) !important;
       }
       #cultural-activities .accordion-button:after {
         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
@@ -230,13 +231,53 @@
         transition: all 150ms ease-in-out;
       }
       #cultural-activities p a:hover {
-        background: var(--secondary-color-theme);
+        background: var(--tertiary-color-theme);
         color: white;
       }
 
       #contact-us {
         background: var(--primary-color-theme);
-        padding: 30px;
+        padding: 50px 80px;
+      }
+      #contact-us .custom-row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+      #contact-us .custom-column-2 {
+        padding-left: 40px;
+      }
+      #contact-us h2 {
+        font-size: 28px;
+      }
+      #contact-us h4 {
+        color: #000000;
+      }
+      #contact-us h4 a {
+        color: var(--quaternary-color-theme);
+        transition: all 150ms ease-in-out;
+      }
+      #contact-us h4 a:hover {
+        background: var(--quaternary-color-theme);
+        color: #ffffff;
+      }
+      #contact-us label {
+        font-size: 14px;
+      }
+
+      footer {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("./osaka-landscape.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+      }
+      footer a,
+      footer a:hover {
+        color: #ffbf00;
       }
 
       @media (max-width: 1130px) {
@@ -257,7 +298,7 @@
           padding: 50px;
         }
         .hero-text-wrapper {
-          background-color: rgba(255, 255, 255, 0.7);
+          background-color: #ffffffb3;
           margin: 40px;
           padding: 20px;
         }
@@ -265,6 +306,14 @@
         #temples-and-shrines .carousel-inner-item {
           max-width: 500px;
           padding: 48px;
+        }
+      }
+      @media (max-width: 768px) {
+        #contact-us .custom-row {
+          grid-template-columns: 1fr;
+        }
+        #contact-us .custom-column-2 {
+          display: none;
         }
       }
       @media (max-width: 700px) {
@@ -296,6 +345,11 @@
 
         #cultural-activities {
           padding: 30px 10px;
+        }
+
+        #contact-us,
+        footer {
+          padding: 40px 50px;
         }
       }
       @media (max-width: 600px) {
@@ -330,6 +384,11 @@
 
         #cultural-activities {
           padding: 30px 2px;
+        }
+
+        #contact-us,
+        footer {
+          padding: 30px;
         }
       }
       @media (max-width: 330px) {
@@ -1552,8 +1611,8 @@
                       versatility in musical expressions.
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/zCRQD54S4xHj71k19"
                         target="_blank"
@@ -1606,8 +1665,8 @@
                       a Kabuki actor!
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/xYxN9wPSUp9M1qzm9"
                         target="_blank"
@@ -1660,8 +1719,8 @@
                       a container and taken home!
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/qaf3b8zNiXsf8inm6"
                         target="_blank"
@@ -1726,8 +1785,8 @@
                       performing arts.
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/KG4AbBRiptmxhtAe8"
                         target="_blank"
@@ -1789,8 +1848,8 @@
                       area.
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/dwV72gSg3THqk27U7"
                         target="_blank"
@@ -1845,8 +1904,8 @@
                       Japanese period dramas?
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/MYWa6zemQDZKfZKU7"
                         target="_blank"
@@ -1906,8 +1965,8 @@
                       that is often performed.
                     </p>
 
-                    <h4>Address</h4>
-                    <p>
+                    <h4 class="m-0">Address</h4>
+                    <p class="m-0">
                       <a
                         href="https://goo.gl/maps/u6jHTTnSRnsonC6d8"
                         target="_blank"
@@ -1925,15 +1984,62 @@
     </section>
 
     <section id="contact-us">
-      <h2 class="text-center">Contact us</h2>
+      <h2>Contact us</h2>
+
+      <div class="custom-row">
+        <div class="custom-column-1">
+          <p class="d-inline-block mb-0">For further inquiries, please call:</p>
+          <h4 class="d-inline-block mt-0">06-6131-4550</h4>
+
+          <br />
+
+          <p class="d-inline-block mb-0">
+            Otherwise, for further information about Osaka, please head to
+          </p>
+          <h4 class="d-inline-block mt-0">
+            <a href="https://osaka-info.jp/en/" target="_blank">OSAKA INFO</a>
+          </h4>
+        </div>
+
+        <div class="custom-column-2">
+          <h4>Feedback Form</h4>
+
+          <div class="row mb-3">
+            <div class="col-6">
+              <div>
+                <label for="name-input" class="form-label"> Name </label>
+                <input type="name" class="form-control" id="name-input" />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div>
+                <label for="email-address-input" class="form-label">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-address-input"
+                  placeholder="name@example.com"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="feedback-input" class="form-label"> Feedback </label>
+            <textarea
+              class="form-control"
+              id="feedback-input"
+              rows="2"
+            ></textarea>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>
-        For further information about Osaka, please head to
-        <a href="https://osaka-info.jp/en/" target="_blank">OSAKA INFO</a>
-      </p>
-
+    <footer class="text-white">
       <p>
         © This project is coded by
 
