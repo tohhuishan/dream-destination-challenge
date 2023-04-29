@@ -2140,7 +2140,7 @@
               <div class="col-6">
                 <div>
                   <label for="email-address-input" class="form-label">
-                    Email address
+                    Email address (optional)
                   </label>
                   <input
                     type="email"
@@ -2215,7 +2215,25 @@
       function submitFeedback(event) {
         event.preventDefault();
 
-        alert("Thank you for your feedback!");
+        function checkFeedbackInput() {
+          let nameBox = document.querySelector(".feedback-form #name-input");
+          if (nameBox.value) {
+            let feedbackFormBox = document.querySelector(
+              ".feedback-form #feedback-input"
+            );
+            if (feedbackFormBox.value) {
+              alert(`Thank you for your feedback, ${nameBox.value}!`);
+            } else {
+              alert(
+                `Please share your valuable feedback with us, ${nameBox.value}.`
+              );
+            }
+          } else {
+            alert("Please key in your name.");
+          }
+        }
+
+        checkFeedbackInput();
       }
 
       let feedbackForm = document.querySelector(".feedback-form");
